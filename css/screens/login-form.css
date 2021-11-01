@@ -1,4 +1,4 @@
-@import "variables.css";
+@import "../variables.css";
 
 #login-form {
   display: flex;
@@ -13,13 +13,16 @@
   margin: 8px 0px;
   font-size: 16px;
 }
-#login-form input[type="text"] {
-  width: 390px;
+
+#login-form input:not([type="submit"]) {
+  width: 385px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  transition: border-color 0.3s ease-in-out;
+}
+#login-form input:not([type="submit"]):focus {
+  border-color: var(--yellow);
 }
 #login-form input[type="password"] {
-  width: 390px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   margin-bottom: 24px;
 }
 #login-form input::placeholder {
@@ -27,14 +30,13 @@
 }
 
 #login-form input[type="submit"] {
+  background-color: var(--yellow);
   border-radius: 5px;
+  cursor: pointer;
 }
 
 #login-form a {
   margin-top: 16px;
   text-decoration: none;
-}
-
-#login-form input:focus {
-  border-color: var(--yellow);
+  color: inherit;
 }
