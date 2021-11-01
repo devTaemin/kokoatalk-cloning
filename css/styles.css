@@ -1,8 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 @import "reset.css";
+@import "variables.css";
 @import "status-bar.css";
 @import "welcome-header.css";
 
 body {
   font-family: "Open Sans", sans-serif;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#login-form input {
+  border: none;
+  height: 50px;
+  width: 400px;
+  padding: 0px 8px;
+  margin: 8px 0px;
+  font-size: 16px;
+}
+#login-form input[type="text"] {
+  width: 390px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+#login-form input[type="password"] {
+  width: 390px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  margin-bottom: 24px;
+}
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#login-form input[type="submit"] {
+  border-radius: 5px;
+}
+
+#login-form a {
+  margin-top: 16px;
+  text-decoration: none;
+}
+
+#login-form input:focus {
+  border-color: var(--yellow);
 }
